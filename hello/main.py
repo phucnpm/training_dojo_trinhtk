@@ -1,5 +1,5 @@
 import os,sys
-os.environ['DJANGO_SETTINGS_MODULE'] = 'Django_Guestbook.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'hello.settings'
 
 # Force Django to reload its settings.
 from django.conf import settings

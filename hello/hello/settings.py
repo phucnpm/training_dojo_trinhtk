@@ -1,4 +1,4 @@
-# Django settings for Django_Guestbook project.
+# Django settings for hello project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -83,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'jg*9(xa=e1*r2q=ey4)02w=qov*vf7@5zzp6bml@!%2_aa#qmc'
+SECRET_KEY = '$umzpc90e=yo62v0tg&06yo+vm*qlz72gouw9e8%5-vl!%a1=8'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -102,14 +102,13 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Django_Guestbook.urls'
+ROOT_URLCONF = 'hello.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'Django_Guestbook.wsgi.application'
+WSGI_APPLICATION = 'hello.wsgi.application'
 
 import os
-ROOT_PATH = os.path.dirname(__file__)
-TEMPLATE_DIRS = (os.path.join(ROOT_PATH, "templates"),)
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -118,11 +117,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'guestbook',
+    'myapp'
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
