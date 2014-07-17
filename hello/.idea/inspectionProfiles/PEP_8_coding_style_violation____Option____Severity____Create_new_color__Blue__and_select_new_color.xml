@@ -1,0 +1,8 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0" is_locked="false">
+    <option name="myName" value="PEP 8 coding style violation -&gt; Option -&gt; Severity -&gt; Create new color (Blue) and select new color" />
+    <option name="myLocal" value="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="Blue" enabled_by_default="true" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="Blue" enabled_by_default="true" />
+  </profile>
+</component>
