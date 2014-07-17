@@ -13,7 +13,7 @@
         var dojoConfig = {
             baseUrl: '//ajax.googaleapis.com/ajax/libs/dojo/1.10.0/dojo',
             paths: {
-                'hello': '/static/js/guestbook'
+                'hello': '/static/js/hello'
             }
         };
     </script>
@@ -36,7 +36,7 @@
             }).play();
         });
         require([
-            '/static/js/hello/myModule.js'
+            'hello/myModule'
         ], function (myModule) {
             myModule.setText('greeting', 'Hello Dojo!');
  
