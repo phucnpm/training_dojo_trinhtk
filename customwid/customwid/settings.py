@@ -1,4 +1,4 @@
-# Django settings for hello project.
+# Django settings for customwid project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -83,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '$umzpc90e=yo62v0tg&06yo+vm*qlz72gouw9e8%5-vl!%a1=8'
+SECRET_KEY = '%7dxkhiu)&d&n=s=x4-av7e50w@#nqq#v$#+5iw8=+@(3$7((s'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -102,13 +102,16 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'hello.urls'
+ROOT_URLCONF = 'customwid.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'hello.wsgi.application'
+WSGI_APPLICATION = 'customwid.wsgi.application'
 
-import os
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -119,7 +122,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'myapp'
     # Uncomment the next line to enable the admin:
+    # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
+    # 'django.contrib.admindocs',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

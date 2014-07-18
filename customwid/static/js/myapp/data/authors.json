@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Khánh Trình",
+        "avatar": "",
+        "bio": "Junior develop"
+    },
+    {
+        "name": "Con nhà người ta",
+        "avatar": "",
+        "bio": "Senior develop"
+    },
+    {
+        "name": "Ngáo ộp",
+        "avatar": "",
+        "bio": "Gà"
+    },
+    {
+        "name": "Cùi bắp",
+        "avatar": "",
+        "bio": "Ngán bắp"
+    },
+    {
+        "name": "Mèo",
+        "avatar": "/static/js/myapp/widget/images/test.png",
+        "bio": "Rất ghét chó"
+    }
+]

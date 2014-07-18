@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Custome Widget</title>
+    <script>
+        var dojoConfig = {
+            baseUrl: '//ajax.googaleapis.com/ajax/libs/dojo/1.10.0/dojo',
+            paths: {
+                'myapp': '/static/js/myapp'
+            }
+        };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/static/js/myapp/widget/css/AuthorWidget.css">
+</head>
+    <body>
+        <div id="authorContainer"></div>
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.0/dojo/dojo.js"></script>
+        <script>
+            require([
+                        "dojo/request",
+                        "dojo/dom",
+                        "dojo/_base/array",
+                        "/static/js/myapp/widget/AuthorWidget.js",
+                        "dojo/domReady!"],
+
+            function(request, dom, arrayUtil, AuthorWidget){
+            // Load up our authors
+            request("/static/js/myapp/data/authors.json", {
+                handleAs: "json"
+            }).then(function(authors){
+                // Get a reference to our container
+                var authorContainer = dom.byId("authorContainer");
+
+                arrayUtil.forEach(authors, function(author){
+                    // Create our widget and place it
+                    var widget = new AuthorWidget(author).placeAt(authorContainer);
+                });
+            });
+        });
+        </script>
+    </body>
+</html>
