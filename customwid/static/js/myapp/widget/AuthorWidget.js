@@ -12,7 +12,10 @@ define([
 ], function(declare, baseFx, lang, domStyle, mouse, on, _WidgetBase, _TemplatedMixin, template){
     return declare([_WidgetBase, _TemplatedMixin], {
         name: "No Name",
-        avatar: require.toUrl("./images/defaultAvatar.jpg"),
+//      Link myapp defined in dojoConfig paths: {
+//                'myapp': '/static/js/myapp'
+//            }
+        avatar: require.toUrl("myapp/widget/images/defaultAvatar.jpg"),
         bio: "",
         templateString: template,
         baseClass: "AuthorWidget",
@@ -50,10 +53,10 @@ define([
                 this._set("avatar", imagePath);
                 this.avatarNode.src = imagePath;
             }
-            else{
-                this._set("avatar", "/static/js/myapp/widget/images/defaultAvatar.jpg");
-                this.avatarNode.src = "/static/js/myapp/widget/images/defaultAvatar.jpg";
-            }
+//            else{
+//                this._set("avatar", "/static/js/myapp/widget/images/defaultAvatar.jpg");
+//                this.avatarNode.src = "/static/js/myapp/widget/images/defaultAvatar.jpg";
+//            }
 
         }
     });
